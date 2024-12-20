@@ -1,42 +1,56 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+.App {
+  margin: 20px;
+}
+
+:root {
+  font-size: 14px;
+  --primary: 202, 87%, 54%;
+  --primary-hover: 202, 87%, 44%;
+  --secondary: 202, 57%, 95%;
+  --secondary-hover: 202, 57%, 100%;
+}
+
+button {
+  background-color: hsl(var(--primary));
+  border: none;
+  color: white;
+  padding: 1rem 1.5rem;
   text-align: center;
-}
+  text-decoration: none;
+  display: inline-block;
+  font-weight: bold;
+  letter-spacing: 0.2px;
+  border-radius: 5px;
+  cursor: pointer;
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+  &:hover {
+    background-color: hsl(var(--primary-hover));
   }
-  to {
-    transform: rotate(360deg);
+
+  &.outline {
+    background-color: transparent;
+    color: hsl(var(--primary));
+    outline: 2px solid hsl(var(--primary));
+    outline-offset: -2px;
   }
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+  &.outline:hover {
+    background-color: hsl(var(--primary-hover));
+    background-color: hsl(var(--secondary));
   }
-}
 
-.card {
-  padding: 2em;
-}
+  &.secondary {
+    background-color: hsl(var(--secondary));
+    color: hsl(var(--primary));
+  }
 
-.read-the-docs {
-  color: #888;
+  &.secondary:hover {
+    background-color: hsl(var(--secondary-hover));
+    color: hsl(var(--primary));
+  }
+
+  &.ghost {
+    background-color: transparent;
+    color: hsl(var(--primary));
+  }
 }
