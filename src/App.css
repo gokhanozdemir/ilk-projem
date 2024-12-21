@@ -60,6 +60,11 @@ button {
     background-color: hsl(var(--primary-hover));
   }
 
+  &.icon:has(img) {
+    padding: 1rem;
+    display: flex;
+  }
+
   /*
    ----- 
   Sizes
@@ -69,26 +74,15 @@ button {
     padding: 0.75rem 1.25rem;
     font-size: 0.75rem;
 
-    &.icon {
-      &:has(img) {
-        padding: 0.6rem;
-        & > img {
-          height: 1.2rem;
-        }
-      }
+    &.icon:has(img) {
+      padding: 0.5rem;
     }
   }
 
   &.lg {
     font-size: 1.5rem;
-
-    &.icon {
-      &:has(img) {
-        padding: 1.1rem;
-        & > img {
-          height: 2rem;
-        }
-      }
+    &.icon:has(img) {
+      padding: 1.4rem;
     }
   }
   /*
@@ -163,21 +157,6 @@ button {
     &:hover {
       color: hsl(var(--primary-hover));
       text-decoration-color: hsl(var(--primary-hover));
-    }
-  }
-
-  &.icon {
-    padding: var(--radius);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    aspect-ratio: 1;
-
-    &:has(img) {
-      padding: 1rem;
-      & > img {
-        height: 100%;
-      }
     }
   }
 
