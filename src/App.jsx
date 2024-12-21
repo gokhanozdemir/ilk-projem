@@ -31,7 +31,6 @@ function App() {
 
   const defaultButtons = [
     {},
-    { className: "icon", icon: true },
     { className: "secondary" },
     { className: "ghost" },
     { className: "destructive" },
